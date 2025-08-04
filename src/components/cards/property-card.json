@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_cards_property_cards",
+  "info": {
+    "displayName": "PropertyCard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

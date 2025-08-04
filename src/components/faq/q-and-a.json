@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_faq_q_and_as",
+  "info": {
+    "displayName": "Q&A"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "text"
+    },
+    "Answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
