@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "career_pages",
+  "collectionName": "services_owners_associations",
   "info": {
-    "singularName": "career-page",
-    "pluralName": "career-pages",
-    "displayName": "Career Page"
+    "singularName": "services-owners-association",
+    "pluralName": "services-owners-associations",
+    "displayName": "Services Owners Association"
   },
   "options": {
     "draftAndPublish": true
@@ -15,17 +15,7 @@
     }
   },
   "attributes": {
-    "topBanner": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "full-screen-banner.banner",
-      "repeatable": false
-    },
-    "careerTitle": {
+    "heading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -33,7 +23,38 @@
         }
       }
     },
-    "careerDescription": {
+    "subHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ownerAssociationBanner": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contractorsTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "contractorsHeading": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -41,81 +62,64 @@
         }
       }
     },
-    "careerInfoHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "careerInfoParagraph": {
-      "type": "component",
+    "contractorsBanner": {
+      "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "common.text-block",
-      "repeatable": true
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "benefitsHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "benefitsList": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "common.text-block",
-      "repeatable": true
-    },
-    "formTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "formDescription": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "brandNameForTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "metaTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "metaDescription": {
+    "contractorsDescription1": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "contractorsDescription2": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "servicesTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FAQChat": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "faq.q-and-a",
+      "repeatable": true
+    },
+    "ownersAssociationCrousel": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cards.property-card",
+      "repeatable": true
     }
   }
 }

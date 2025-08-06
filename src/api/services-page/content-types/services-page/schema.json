@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_pages",
+  "collectionName": "services_pages",
   "info": {
-    "singularName": "home-page",
-    "pluralName": "home-pages",
-    "displayName": "Home Page"
+    "singularName": "services-page",
+    "pluralName": "services-pages",
+    "displayName": "Services Page"
   },
   "options": {
     "draftAndPublish": true
@@ -31,7 +31,22 @@
         }
       }
     },
-    "discoverButton": {
+    "serviceBanner": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "focusHeading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -39,7 +54,7 @@
         }
       }
     },
-    "aboutTitle": {
+    "focusSubHeading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -47,7 +62,7 @@
         }
       }
     },
-    "aboutHeading": {
+    "focusTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -55,15 +70,7 @@
         }
       }
     },
-    "aboutSubheading": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "ServiceCarousel": {
+    "ServicePageCarousel": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -73,7 +80,31 @@
       "component": "cards.property-card",
       "repeatable": true
     },
-    "aboutBanner": {
+    "featuredTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "featuredHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "featuredSubHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "featuredImage": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -82,27 +113,14 @@
       },
       "multiple": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     },
-    "ServiceTitle": {
+    "featuredButton": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "ServiceHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "ServiceDescription": {
-      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -133,6 +151,14 @@
         }
       }
     },
+    "SignatureButton": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "SignatureImage": {
       "type": "media",
       "pluginOptions": {
@@ -147,74 +173,6 @@
         "videos",
         "audios"
       ]
-    },
-    "SignatureButton": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FeaturedCarousel": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "cards.property-card",
-      "repeatable": true
-    },
-    "FeaturedTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FeaturedHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FAQTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FAQHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FAQSubheading": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FAQChat": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "faq.q-and-a",
-      "repeatable": true
     }
   }
 }
