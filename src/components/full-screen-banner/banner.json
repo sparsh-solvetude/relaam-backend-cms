@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_full_screen_banner_banners",
+  "info": {
+    "displayName": "heroBanner"
+  },
+  "options": {},
+  "attributes": {
+    "bannerText": {
+      "type": "string"
+    },
+    "fullScreenBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

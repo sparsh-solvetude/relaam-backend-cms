@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "recognition_pages",
+  "info": {
+    "singularName": "recognition-page",
+    "pluralName": "recognition-pages",
+    "displayName": "Recognition page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "topBanner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "full-screen-banner.banner",
+      "repeatable": false
+    },
+    "awardsHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "awardsDescription": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "awardsCard": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cards.plain-text-card",
+      "repeatable": true
+    },
+    "alliancesCards": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cards.plain-text-card",
+      "repeatable": true
+    }
+  }
+}
