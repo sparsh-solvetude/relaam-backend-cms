@@ -72,6 +72,18 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface TableTableRow extends Struct.ComponentSchema {
+  collectionName: 'components_table_table_rows';
+  info: {
+    displayName: 'tableRow';
+  };
+  attributes: {
+    keyConditions: Schema.Attribute.String;
+    typeOfLease: Schema.Attribute.String;
+    typeOfTransfer: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -81,6 +93,7 @@ declare module '@strapi/strapi' {
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'table.table-row': TableTableRow;
     }
   }
 }

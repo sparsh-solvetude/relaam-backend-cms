@@ -919,6 +919,133 @@ export interface ApiRecognitionPageRecognitionPage
   };
 }
 
+export interface ApiServicesLeasingServicesPageServicesLeasingServicesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'services_leasing_services_pages';
+  info: {
+    displayName: 'Services leasing Services Page';
+    pluralName: 'services-leasing-services-pages';
+    singularName: 'services-leasing-services-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description1: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description2: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description3: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description4: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description5: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leaseTransferDescription: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leaseTrasferTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leasingBanner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leasingHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leasingServicesCrousle: Schema.Attribute.Component<
+      'cards.property-card',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leasingSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leasingTable: Schema.Attribute.Component<'table.table-row', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-leasing-services-page.services-leasing-services-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    servicesHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    servicesTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    termsAndCondition: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicesOwnersAssociationServicesOwnersAssociation
   extends Struct.SingleTypeSchema {
   collectionName: 'services_owners_associations';
@@ -1781,6 +1908,7 @@ declare module '@strapi/strapi' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::legacy-page.legacy-page': ApiLegacyPageLegacyPage;
       'api::recognition-page.recognition-page': ApiRecognitionPageRecognitionPage;
+      'api::services-leasing-services-page.services-leasing-services-page': ApiServicesLeasingServicesPageServicesLeasingServicesPage;
       'api::services-owners-association.services-owners-association': ApiServicesOwnersAssociationServicesOwnersAssociation;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
