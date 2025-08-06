@@ -22,11 +22,24 @@ export interface FaqQAndA extends Struct.ComponentSchema {
   };
 }
 
+export interface TableTableRow extends Struct.ComponentSchema {
+  collectionName: 'components_table_table_rows';
+  info: {
+    displayName: 'tableRow';
+  };
+  attributes: {
+    keyConditions: Schema.Attribute.String;
+    typeOfLease: Schema.Attribute.String;
+    typeOfTransfer: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cards.property-card': CardsPropertyCard;
       'faq.q-and-a': FaqQAndA;
+      'table.table-row': TableTableRow;
     }
   }
 }
