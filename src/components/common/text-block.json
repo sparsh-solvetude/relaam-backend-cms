@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_common_text_blocks",
+  "info": {
+    "displayName": "TextBlock"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

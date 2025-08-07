@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cards_plain_text_cards",
+  "info": {
+    "displayName": "PlainTextCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "descriptionParagraphs": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
