@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_table_signature_tables",
+  "info": {
+    "displayName": "Signature Table Row"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

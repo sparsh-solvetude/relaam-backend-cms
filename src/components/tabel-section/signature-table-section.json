@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_tabel_section_signature_table_sections",
+  "info": {
+    "displayName": "Signature Table Section"
+  },
+  "options": {},
+  "attributes": {
+    "tableSection": {
+      "type": "component",
+      "component": "table.signature-table",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

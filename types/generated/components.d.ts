@@ -72,6 +72,28 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface TabelSectionSignatureTableSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_tabel_section_signature_table_sections';
+  info: {
+    displayName: 'Signature Table Section';
+  };
+  attributes: {
+    tableSection: Schema.Attribute.Component<'table.signature-table', true>;
+  };
+}
+
+export interface TableSignatureTable extends Struct.ComponentSchema {
+  collectionName: 'components_table_signature_tables';
+  info: {
+    displayName: 'Signature Table Row';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface TableTableRow extends Struct.ComponentSchema {
   collectionName: 'components_table_table_rows';
   info: {
@@ -93,6 +115,8 @@ declare module '@strapi/strapi' {
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'tabel-section.signature-table-section': TabelSectionSignatureTableSection;
+      'table.signature-table': TableSignatureTable;
       'table.table-row': TableTableRow;
     }
   }

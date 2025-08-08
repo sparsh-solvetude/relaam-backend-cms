@@ -1002,7 +1002,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
   };
 }
-
 export interface ApiLegacyPageLegacyPage extends Struct.SingleTypeSchema {
   collectionName: 'legacy_pages';
   info: {
@@ -1188,6 +1187,131 @@ export interface ApiPropertyManagementPagePropertyManagementPage
   };
 }
 
+export interface ApiNeighborhoodPageNeighborhoodPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'neighborhood_pages';
+  info: {
+    displayName: 'Neighborhood Page';
+    pluralName: 'neighborhood-pages';
+    singularName: 'neighborhood-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    ADBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ADButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ADHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ADSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ALBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ALButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ALHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    ALSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    LAResidenceBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    LaResidenceButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    LAResidenceHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    LAResidenceSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::neighborhood-page.neighborhood-page'>;
+    NBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    NeighborhoodCraousel: Schema.Attribute.Component<'cards.property-card', true> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    OVDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    overViewHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    overViewSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    overviewTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    publishedAt: Schema.Attribute.DateTime;
+    SPTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNeighorhoodMbzPageNeighorhoodMbzPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'neighorhood_mbz_pages';
+  info: {
+    displayName: 'Neighorhood  MBZ Page';
+    pluralName: 'neighorhood-mbz-pages';
+    singularName: 'neighorhood-mbz-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description1: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    description2: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    description3: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::neighorhood-mbz-page.neighorhood-mbz-page'>;
+    mbzBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    mbzDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    mbzHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    mbzSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    mbzTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    POCrousel: Schema.Attribute.Component<'cards.property-card', true> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    PSButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    PSDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    PSHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{ i18n: { localized: true } }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
 export interface ApiRecognitionPageRecognitionPage
   extends Struct.SingleTypeSchema {
   collectionName: 'recognition_pages';
@@ -1613,6 +1737,127 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
         };
       }>;
     subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSignatureProjectAdOnePageSignatureProjectAdOnePage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'signature_project_ad_one_pages';
+  info: {
+    displayName: 'Signature Project AD One Page';
+    pluralName: 'signature-project-ad-one-pages';
+    singularName: 'signature-project-ad-one-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    adOneBanner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    adOneCrousel: Schema.Attribute.Component<'cards.property-card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    adOneHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    adOneSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    adOneTable: Schema.Attribute.Component<
+      'tabel-section.signature-table-section',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description1: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description2: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    detailTitile: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::signature-project-ad-one-page.signature-project-ad-one-page'
+    >;
+    PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    PSButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    PSDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    psHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2241,10 +2486,13 @@ declare module '@strapi/strapi' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::legacy-page.legacy-page': ApiLegacyPageLegacyPage;
       'api::property-management-page.property-management-page': ApiPropertyManagementPagePropertyManagementPage;
+      'api::neighborhood-page.neighborhood-page': ApiNeighborhoodPageNeighborhoodPage;
+      'api::neighorhood-mbz-page.neighorhood-mbz-page': ApiNeighorhoodMbzPageNeighorhoodMbzPage;
       'api::recognition-page.recognition-page': ApiRecognitionPageRecognitionPage;
       'api::services-leasing-services-page.services-leasing-services-page': ApiServicesLeasingServicesPageServicesLeasingServicesPage;
       'api::services-owners-association.services-owners-association': ApiServicesOwnersAssociationServicesOwnersAssociation;
       'api::services-page.services-page': ApiServicesPageServicesPage;
+      'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
