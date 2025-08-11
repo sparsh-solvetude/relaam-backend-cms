@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "neighborhood_page_slugs",
+  "info": {
+    "singularName": "neighborhood-page-slug",
+    "pluralName": "neighborhood-page-slugs",
+    "displayName": "Neighborhood Page Slug"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "url",
+      "required": true
+    },
+    "heading": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "POCrousel": {
+      "type": "component",
+      "component": "cards.property-card",
+      "repeatable": true
+    },
+    "description1": {
+      "type": "text"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "description3": {
+      "type": "text"
+    },
+    "PSHeading": {
+      "type": "string"
+    },
+    "PSDescription": {
+      "type": "text"
+    },
+    "PSBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PSButton": {
+      "type": "string"
+    },
+    "slugHeading": {
+      "type": "string"
+    },
+    "slugSubHeading": {
+      "type": "string"
+    },
+    "slugDescription": {
+      "type": "text"
+    }
+  }
+}

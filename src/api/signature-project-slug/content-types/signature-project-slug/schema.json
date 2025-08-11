@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "signature_project_slugs",
+  "info": {
+    "singularName": "signature-project-slug",
+    "pluralName": "signature-project-slugs",
+    "displayName": "Signature Project Slug"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "URL": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "URL",
+      "required": true
+    },
+    "heading": {
+      "type": "string"
+    },
+    "adOneBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "adOneHeading": {
+      "type": "string"
+    },
+    "adOneSubHeading": {
+      "type": "string"
+    },
+    "adOneCrousel": {
+      "type": "component",
+      "component": "cards.property-card",
+      "repeatable": true
+    },
+    "description1": {
+      "type": "text"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "detailTitile": {
+      "type": "string"
+    },
+    "psHeading": {
+      "type": "string"
+    },
+    "PSDescription": {
+      "type": "text"
+    },
+    "PSButton": {
+      "type": "string"
+    },
+    "PSBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "adOneTable": {
+      "type": "component",
+      "component": "tabel-section.signature-table-section",
+      "repeatable": true
+    }
+  }
+}

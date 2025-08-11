@@ -32,7 +32,7 @@ export interface CardsPropertyCard extends Struct.ComponentSchema {
     displayName: 'PropertyCard';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images'>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
   };
 }
@@ -69,6 +69,32 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
     fullScreenBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface SignatueTableSectionSignatureTableSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_signatue_table_section_signature_table_sections';
+  info: {
+    displayName: 'Signature Table Section';
+  };
+  attributes: {
+    tableSection: Schema.Attribute.Component<
+      'signature-table-row.signature-table',
+      true
+    >;
+  };
+}
+
+export interface SignatureTableRowSignatureTable
+  extends Struct.ComponentSchema {
+  collectionName: 'components_signature_table_row_signature_tables';
+  info: {
+    displayName: 'Signature Table';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -115,6 +141,8 @@ declare module '@strapi/strapi' {
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'signatue-table-section.signature-table-section': SignatueTableSectionSignatureTableSection;
+      'signature-table-row.signature-table': SignatureTableRowSignatureTable;
       'tabel-section.signature-table-section': TabelSectionSignatureTableSection;
       'table.signature-table': TableSignatureTable;
       'table.table-row': TableTableRow;
