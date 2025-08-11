@@ -15,21 +15,15 @@
     }
   },
   "attributes": {
-    "heading": {
-      "type": "string",
+    "Showcase": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "subHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      },
+      "component": "cards.page-banner",
+      "repeatable": true
     },
     "discoverButton": {
       "type": "string",

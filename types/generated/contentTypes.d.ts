@@ -923,12 +923,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    heading: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -954,6 +948,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         };
       }>;
     ServiceTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Showcase: Schema.Attribute.Component<'cards.page-banner', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -986,12 +986,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         };
       }>;
     SignatureTitle: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    subHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
