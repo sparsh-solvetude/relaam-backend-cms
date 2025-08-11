@@ -13,6 +13,21 @@ export interface CardsMediaCard extends Struct.ComponentSchema {
   };
 }
 
+export interface CardsPageBanner extends Struct.ComponentSchema {
+  collectionName: 'components_cards_page_banners';
+  info: {
+    displayName: 'PageBanner';
+  };
+  attributes: {
+    Banner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    heading: Schema.Attribute.String;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
 export interface CardsPlainTextCard extends Struct.ComponentSchema {
   collectionName: 'components_cards_plain_text_cards';
   info: {
@@ -110,6 +125,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cards.media-card': CardsMediaCard;
+      'cards.page-banner': CardsPageBanner;
       'cards.plain-text-card': CardsPlainTextCard;
       'cards.property-card': CardsPropertyCard;
       'common.text-block': CommonTextBlock;
