@@ -41,17 +41,7 @@
         }
       }
     },
-    "awardsCard": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "cards.plain-text-card",
-      "repeatable": true
-    },
-    "alliancesCards": {
+    "recognitionCards": {
       "type": "component",
       "pluginOptions": {
         "i18n": {

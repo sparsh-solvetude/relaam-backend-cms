@@ -35,8 +35,8 @@ export interface CardsPlainTextCard extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    descriptionParagraphs: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
