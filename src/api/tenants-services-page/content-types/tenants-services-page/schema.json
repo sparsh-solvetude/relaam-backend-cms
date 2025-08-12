@@ -1,0 +1,72 @@
+{
+  "kind": "singleType",
+  "collectionName": "tenants_services_pages",
+  "info": {
+    "singularName": "tenants-services-page",
+    "pluralName": "tenants-services-pages",
+    "displayName": "Tenants Services Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "tsBanner": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tsTitle": {
+      "type": "string"
+    },
+    "tsHeading": {
+      "type": "string"
+    },
+    "tsSubHeading": {
+      "type": "string"
+    },
+    "tsBanner2": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tsDescription1": {
+      "type": "text"
+    },
+    "tsDescription2": {
+      "type": "text"
+    },
+    "tsDescription3": {
+      "type": "text"
+    },
+    "offeringTitle": {
+      "type": "string"
+    },
+    "FAQChat": {
+      "type": "component",
+      "component": "faq.q-and-a",
+      "repeatable": true
+    },
+    "TSCrousel": {
+      "type": "component",
+      "component": "cards.property-card",
+      "repeatable": true
+    }
+  }
+}
