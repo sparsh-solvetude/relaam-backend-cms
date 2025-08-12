@@ -107,6 +107,43 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface AdminAuditLog extends Struct.CollectionTypeSchema {
+  collectionName: 'strapi_audit_logs';
+  info: {
+    displayName: 'Audit Log';
+    pluralName: 'audit-logs';
+    singularName: 'audit-log';
+  };
+  options: {
+    draftAndPublish: false;
+    timestamps: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    action: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
+      Schema.Attribute.Private;
+    payload: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -613,50 +650,6 @@ export interface ApiCareerPageCareerPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiContractorsServicesPageContractorsServicesPage
-  extends Struct.SingleTypeSchema {
-  collectionName: 'contractors_services_pages';
-  info: {
-    displayName: 'Contractors Services Page';
-    pluralName: 'contractors-services-pages';
-    singularName: 'contractors-services-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    CSBanner: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    csBanner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    CSCrousel: Schema.Attribute.Component<'cards.property-card', true>;
-    csDescription1: Schema.Attribute.Text;
-    csDescription2: Schema.Attribute.Text;
-    csDescription3: Schema.Attribute.Text;
-    csHeading: Schema.Attribute.String;
-    csSubHeading: Schema.Attribute.String;
-    csTitle: Schema.Attribute.String;
-    FAQChat: Schema.Attribute.Component<'faq.q-and-a', true>;
-    heading: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::contractors-services-page.contractors-services-page'
-    > &
-      Schema.Attribute.Private;
-    offeringTitle: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    subHeading: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiFacilityManagementPageFacilityManagementPage
   extends Struct.SingleTypeSchema {
   collectionName: 'facility_management_pages';
@@ -696,12 +689,6 @@ export interface ApiFacilityManagementPageFacilityManagementPage
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     facilityDescription: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    facilityDescription2: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1004,88 +991,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLandlordsServicesPageLandlordsServicesPage
-  extends Struct.SingleTypeSchema {
-  collectionName: 'landlords_services_pages';
-  info: {
-    displayName: 'Landlords Services Page';
-    pluralName: 'landlords-services-pages';
-    singularName: 'landlords-services-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    FAQChat: Schema.Attribute.Component<'faq.q-and-a', true>;
-    heading: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::landlords-services-page.landlords-services-page'
-    > &
-      Schema.Attribute.Private;
-    LSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    lsBanner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    LSCrousel: Schema.Attribute.Component<'cards.property-card', true>;
-    lsDescription1: Schema.Attribute.Text;
-    lsDescription2: Schema.Attribute.Text;
-    lsDescription3: Schema.Attribute.Text;
-    lsHeading: Schema.Attribute.String;
-    lsSubHeading: Schema.Attribute.String;
-    lsTitle: Schema.Attribute.String;
-    offeringTitle: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    subHeading: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLeasingServicePageLeasingServicePage
-  extends Struct.SingleTypeSchema {
-  collectionName: 'leasing_service_pages';
-  info: {
-    displayName: 'Leasing Service Page';
-    pluralName: 'leasing-service-pages';
-    singularName: 'leasing-service-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    FAQChat: Schema.Attribute.Component<'faq.q-and-a', true>;
-    heading: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::leasing-service-page.leasing-service-page'
-    > &
-      Schema.Attribute.Private;
-    LSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    lsBanner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    LSCrousel: Schema.Attribute.Component<'cards.property-card', true>;
-    lsDescription1: Schema.Attribute.Text;
-    lsDescription2: Schema.Attribute.Text;
-    lsDescription3: Schema.Attribute.Text;
-    lsHeading: Schema.Attribute.String;
-    lsSubHeading: Schema.Attribute.String;
-    lsTitle: Schema.Attribute.String;
-    offeringTitle: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    subHeading: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2300,53 +2205,6 @@ export interface ApiSignatureProjectSignatureProject
   };
 }
 
-export interface ApiTenantsServicesPageTenantsServicesPage
-  extends Struct.SingleTypeSchema {
-  collectionName: 'tenants_services_pages';
-  info: {
-    displayName: 'Tenants Services Page';
-    pluralName: 'tenants-services-pages';
-    singularName: 'tenants-services-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    FAQChat: Schema.Attribute.Component<'faq.q-and-a', true>;
-    heading: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::tenants-services-page.tenants-services-page'
-    > &
-      Schema.Attribute.Private;
-    offeringTitle: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    subHeading: Schema.Attribute.String;
-    tsBanner: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    tsBanner2: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    TSCrousel: Schema.Attribute.Component<'cards.property-card', true>;
-    tsDescription1: Schema.Attribute.Text;
-    tsDescription2: Schema.Attribute.Text;
-    tsDescription3: Schema.Attribute.Text;
-    tsHeading: Schema.Attribute.String;
-    tsSubHeading: Schema.Attribute.String;
-    tsTitle: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2851,6 +2709,7 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
+      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::transfer-token': AdminTransferToken;
@@ -2858,11 +2717,8 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::career-page.career-page': ApiCareerPageCareerPage;
-      'api::contractors-services-page.contractors-services-page': ApiContractorsServicesPageContractorsServicesPage;
       'api::facility-management-page.facility-management-page': ApiFacilityManagementPageFacilityManagementPage;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::landlords-services-page.landlords-services-page': ApiLandlordsServicesPageLandlordsServicesPage;
-      'api::leasing-service-page.leasing-service-page': ApiLeasingServicePageLeasingServicePage;
       'api::legacy-page.legacy-page': ApiLegacyPageLegacyPage;
       'api::neighborhood-page-slug.neighborhood-page-slug': ApiNeighborhoodPageSlugNeighborhoodPageSlug;
       'api::neighborhood-page.neighborhood-page': ApiNeighborhoodPageNeighborhoodPage;
@@ -2875,7 +2731,6 @@ declare module '@strapi/strapi' {
       'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project-slug.signature-project-slug': ApiSignatureProjectSlugSignatureProjectSlug;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
-      'api::tenants-services-page.tenants-services-page': ApiTenantsServicesPageTenantsServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
