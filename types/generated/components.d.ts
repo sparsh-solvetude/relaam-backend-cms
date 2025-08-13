@@ -23,6 +23,8 @@ export interface CardsPageBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    discoverButton: Schema.Attribute.String;
+    discoverButtonLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
   };
