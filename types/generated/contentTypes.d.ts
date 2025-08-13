@@ -961,12 +961,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    discoverButton: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     FAQChat: Schema.Attribute.Component<'faq.q-and-a', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1594,6 +1588,18 @@ export interface ApiPropertyManagementPagePropertyManagementPage
       'oneToMany',
       'api::property-management-page.property-management-page'
     >;
+    offeringDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    offeringHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2298,6 +2304,12 @@ export interface ApiSignatureProjectSignatureProject
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2356,6 +2368,12 @@ export interface ApiSignatureProjectSignatureProject
       'cards.media-card',
       true
     > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
