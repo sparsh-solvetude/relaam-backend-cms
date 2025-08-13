@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_form_career_forms",
+  "info": {
+    "displayName": "Career Form",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "tel",
+        "select"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
