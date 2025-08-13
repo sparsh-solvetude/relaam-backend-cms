@@ -5,9 +5,6 @@
   },
   "options": {},
   "attributes": {
-    "bannerText": {
-      "type": "string"
-    },
     "fullScreenBanner": {
       "type": "media",
       "multiple": false,
@@ -17,6 +14,9 @@
         "videos",
         "audios"
       ]
+    },
+    "bannerText": {
+      "type": "blocks"
     }
   },
   "config": {}
