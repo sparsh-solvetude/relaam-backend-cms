@@ -74,6 +74,20 @@ export interface FaqQAndA extends Struct.ComponentSchema {
   };
 }
 
+export interface FormCareerForm extends Struct.ComponentSchema {
+  collectionName: 'components_form_career_forms';
+  info: {
+    displayName: 'Career Form';
+    icon: 'bulletList';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    options: Schema.Attribute.JSON;
+    placeholder: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['text', 'email', 'tel', 'select']>;
+  };
+}
+
 export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   collectionName: 'components_full_screen_banner_banners';
   info: {
@@ -156,6 +170,7 @@ declare module '@strapi/strapi' {
       'cards.property-card': CardsPropertyCard;
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
+      'form.career-form': FormCareerForm;
       'full-screen-banner.banner': FullScreenBannerBanner;
       'signatue-table-section.signature-table-section': SignatueTableSectionSignatureTableSection;
       'signature-table-row.signature-table': SignatureTableRowSignatureTable;
