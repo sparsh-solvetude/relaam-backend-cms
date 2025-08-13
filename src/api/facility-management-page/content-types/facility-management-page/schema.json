@@ -39,7 +39,7 @@
         }
       }
     },
-    "facilityDescription": {
+    "facilityManagementHeading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -47,7 +47,7 @@
         }
       }
     },
-    "facilityDescription2": {
+    "facilityManagementDescription": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -246,6 +246,14 @@
         "videos",
         "audios"
       ]
+    },
+    "facilityManagementHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

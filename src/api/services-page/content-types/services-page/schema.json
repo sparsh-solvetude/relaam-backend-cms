@@ -173,6 +173,14 @@
         "videos",
         "audios"
       ]
+    },
+    "focusHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
