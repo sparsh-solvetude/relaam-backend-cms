@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_pages",
+  "info": {
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "Contact Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroText": {
+      "type": "string"
+    },
+    "descriptionParagraphOne": {
+      "type": "text"
+    },
+    "descriptionParagraphTwo": {
+      "type": "string"
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "form.career-form",
+      "repeatable": true
+    },
+    "formSubmitButtonText": {
+      "type": "string"
+    },
+    "enquiriesButtonText": {
+      "type": "string"
+    },
+    "faqTitleText": {
+      "type": "string"
+    },
+    "faq": {
+      "type": "component",
+      "component": "faq.q-and-a",
+      "repeatable": true
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "formOptionalText": {
+      "type": "string"
+    },
+    "ourOffices": {
+      "type": "component",
+      "component": "cards.office-card",
+      "repeatable": true
+    },
+    "newOffices": {
+      "type": "component",
+      "component": "cards.office-card",
+      "repeatable": true
+    },
+    "ourOfficesTitle": {
+      "type": "string"
+    },
+    "newOfficesTitle": {
+      "type": "string"
+    },
+    "newOfficesSubtitle": {
+      "type": "string"
+    }
+  }
+}
