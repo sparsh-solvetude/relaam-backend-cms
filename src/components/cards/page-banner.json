@@ -20,12 +20,6 @@
         "videos",
         "audios"
       ]
-    },
-    "discoverLink": {
-      "type": "string"
-    },
-    "discoverButton": {
-      "type": "string"
     }
   },
   "config": {}

@@ -117,22 +117,6 @@
         }
       }
     },
-    "offeringDescription": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "offeringHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "FAQChat": {
       "type": "component",
       "pluginOptions": {
