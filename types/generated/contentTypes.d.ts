@@ -967,6 +967,58 @@ export interface ApiFacilityManagementPageFacilityManagementPage
   };
 }
 
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    copyRightText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FooterDropdown: Schema.Attribute.Component<'menu-items.menu-items', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+    publishedAt: Schema.Attribute.DateTime;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -2163,6 +2215,55 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSideNavbarSideNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'side_navbars';
+  info: {
+    displayName: 'SideNavbar';
+    pluralName: 'side-navbars';
+    singularName: 'side-navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::side-navbar.side-navbar'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    SideNavDropdown: Schema.Attribute.Component<'menu-items.menu-items', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSignatureProjectAdOnePageSignatureProjectAdOnePage
   extends Struct.SingleTypeSchema {
   collectionName: 'signature_project_ad_one_pages';
@@ -3008,6 +3109,7 @@ declare module '@strapi/strapi' {
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::contractors-services-page.contractors-services-page': ApiContractorsServicesPageContractorsServicesPage;
       'api::facility-management-page.facility-management-page': ApiFacilityManagementPageFacilityManagementPage;
+      'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landlords-services-page.landlords-services-page': ApiLandlordsServicesPageLandlordsServicesPage;
       'api::leasing-service-page.leasing-service-page': ApiLeasingServicePageLeasingServicePage;
@@ -3020,6 +3122,7 @@ declare module '@strapi/strapi' {
       'api::services-leasing-services-page.services-leasing-services-page': ApiServicesLeasingServicesPageServicesLeasingServicesPage;
       'api::services-owners-association.services-owners-association': ApiServicesOwnersAssociationServicesOwnersAssociation;
       'api::services-page.services-page': ApiServicesPageServicesPage;
+      'api::side-navbar.side-navbar': ApiSideNavbarSideNavbar;
       'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project-slug.signature-project-slug': ApiSignatureProjectSlugSignatureProjectSlug;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
