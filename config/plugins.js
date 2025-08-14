@@ -3,6 +3,7 @@ module.exports = () => ({
     config: {
       actionOptions: {
         upload: {
+          sizeLimit: 20 * 1024 * 1024,
           allowedTypes: [
             "image/jpeg",
             "image/png",
