@@ -1427,6 +1427,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
           localized: true;
         };
       }>;
+    headingLineTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     LAResidenceBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
