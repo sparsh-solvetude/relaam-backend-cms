@@ -66,6 +66,9 @@
     },
     "newOfficesSubtitle": {
       "type": "string"
+    },
+    "enquiriesButtonPhone": {
+      "type": "string"
     }
   }
 }

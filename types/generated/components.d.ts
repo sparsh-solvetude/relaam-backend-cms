@@ -22,7 +22,9 @@ export interface CardsOfficeCard extends Struct.ComponentSchema {
   attributes: {
     addressLine1: Schema.Attribute.String;
     addressLine2: Schema.Attribute.String;
+    addressText: Schema.Attribute.String;
     branchName: Schema.Attribute.String;
+    buttonLink: Schema.Attribute.String;
     buttonText: Schema.Attribute.String;
     callText: Schema.Attribute.String;
     contactNumber: Schema.Attribute.String;

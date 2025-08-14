@@ -42,6 +42,12 @@
     },
     "callText": {
       "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "addressText": {
+      "type": "string"
     }
   },
   "config": {}
