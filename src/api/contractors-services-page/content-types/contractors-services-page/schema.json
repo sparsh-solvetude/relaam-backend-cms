@@ -67,6 +67,9 @@
       "type": "component",
       "component": "cards.property-card",
       "repeatable": true
+    },
+    "offeringSubTitle": {
+      "type": "blocks"
     }
   }
 }

@@ -101,6 +101,17 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface RichFaqRichFaq extends Struct.ComponentSchema {
+  collectionName: 'components_rich_faq_rich_faqs';
+  info: {
+    displayName: 'RichFAQ';
+  };
+  attributes: {
+    Answer: Schema.Attribute.Blocks;
+    Question: Schema.Attribute.String;
+  };
+}
+
 export interface SignatueTableSectionSignatureTableSection
   extends Struct.ComponentSchema {
   collectionName: 'components_signatue_table_section_signature_table_sections';
@@ -172,6 +183,7 @@ declare module '@strapi/strapi' {
       'faq.q-and-a': FaqQAndA;
       'form.career-form': FormCareerForm;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'rich-faq.rich-faq': RichFaqRichFaq;
       'signatue-table-section.signature-table-section': SignatueTableSectionSignatureTableSection;
       'signature-table-row.signature-table': SignatureTableRowSignatureTable;
       'tabel-section.signature-table-section': TabelSectionSignatureTableSection;

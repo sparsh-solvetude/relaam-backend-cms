@@ -136,6 +136,14 @@
       },
       "component": "cards.property-card",
       "repeatable": true
+    },
+    "offeringSubTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
