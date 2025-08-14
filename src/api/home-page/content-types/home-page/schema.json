@@ -25,14 +25,6 @@
       "component": "cards.page-banner",
       "repeatable": true
     },
-    "discoverButton": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "aboutTitle": {
       "type": "string",
       "pluginOptions": {
@@ -209,6 +201,22 @@
       },
       "component": "faq.q-and-a",
       "repeatable": true
+    },
+    "ServiceHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FeaturedHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

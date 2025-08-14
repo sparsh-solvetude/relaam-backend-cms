@@ -686,6 +686,49 @@ export interface ApiCareerPageCareerPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
+  collectionName: 'contact_pages';
+  info: {
+    displayName: 'Contact Page';
+    pluralName: 'contact-pages';
+    singularName: 'contact-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contactForm: Schema.Attribute.Component<'form.career-form', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descriptionParagraphOne: Schema.Attribute.Text;
+    descriptionParagraphTwo: Schema.Attribute.String;
+    enquiriesButtonText: Schema.Attribute.String;
+    faq: Schema.Attribute.Component<'faq.q-and-a', true>;
+    faqTitleText: Schema.Attribute.String;
+    formOptionalText: Schema.Attribute.String;
+    formSubmitButtonText: Schema.Attribute.String;
+    heroText: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-page.contact-page'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    newOffices: Schema.Attribute.Component<'cards.office-card', true>;
+    newOfficesSubtitle: Schema.Attribute.String;
+    newOfficesTitle: Schema.Attribute.String;
+    ourOffices: Schema.Attribute.Component<'cards.office-card', true>;
+    ourOfficesTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContractorsServicesPageContractorsServicesPage
   extends Struct.SingleTypeSchema {
   collectionName: 'contractors_services_pages';
@@ -768,13 +811,19 @@ export interface ApiFacilityManagementPageFacilityManagementPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    facilityDescription: Schema.Attribute.String &
+    facilityManagementDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    facilityDescription2: Schema.Attribute.Text &
+    facilityManagementHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    facilityManagementHeadingLineTwo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -918,6 +967,58 @@ export interface ApiFacilityManagementPageFacilityManagementPage
   };
 }
 
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    copyRightText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FooterDropdown: Schema.Attribute.Component<'menu-items.menu-items', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+    publishedAt: Schema.Attribute.DateTime;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -961,12 +1062,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    discoverButton: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     FAQChat: Schema.Attribute.Component<'faq.q-and-a', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1003,6 +1098,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    FeaturedHeadingLineTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     FeaturedTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1028,6 +1129,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         };
       }>;
     ServiceHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ServiceHeadingLineTwo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2017,6 +2124,12 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    focusHeadingLineTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     focusSubHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2085,6 +2198,55 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
         };
       }>;
     SignatureTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSideNavbarSideNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'side_navbars';
+  info: {
+    displayName: 'SideNavbar';
+    pluralName: 'side-navbars';
+    singularName: 'side-navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::side-navbar.side-navbar'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    SideNavDropdown: Schema.Attribute.Component<'menu-items.menu-items', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2298,6 +2460,12 @@ export interface ApiSignatureProjectSignatureProject
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2356,6 +2524,12 @@ export interface ApiSignatureProjectSignatureProject
       'cards.media-card',
       true
     > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2932,8 +3106,10 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::career-page.career-page': ApiCareerPageCareerPage;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::contractors-services-page.contractors-services-page': ApiContractorsServicesPageContractorsServicesPage;
       'api::facility-management-page.facility-management-page': ApiFacilityManagementPageFacilityManagementPage;
+      'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landlords-services-page.landlords-services-page': ApiLandlordsServicesPageLandlordsServicesPage;
       'api::leasing-service-page.leasing-service-page': ApiLeasingServicePageLeasingServicePage;
@@ -2946,6 +3122,7 @@ declare module '@strapi/strapi' {
       'api::services-leasing-services-page.services-leasing-services-page': ApiServicesLeasingServicesPageServicesLeasingServicesPage;
       'api::services-owners-association.services-owners-association': ApiServicesOwnersAssociationServicesOwnersAssociation;
       'api::services-page.services-page': ApiServicesPageServicesPage;
+      'api::side-navbar.side-navbar': ApiSideNavbarSideNavbar;
       'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project-slug.signature-project-slug': ApiSignatureProjectSlugSignatureProjectSlug;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;

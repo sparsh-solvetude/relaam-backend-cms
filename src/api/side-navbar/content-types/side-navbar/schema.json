@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "side_navbars",
+  "info": {
+    "singularName": "side-navbar",
+    "pluralName": "side-navbars",
+    "displayName": "SideNavbar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "SideNavDropdown": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "menu-items.menu-items",
+      "repeatable": true
+    },
+    "Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "subHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

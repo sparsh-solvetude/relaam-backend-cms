@@ -13,6 +13,26 @@ export interface CardsMediaCard extends Struct.ComponentSchema {
   };
 }
 
+export interface CardsOfficeCard extends Struct.ComponentSchema {
+  collectionName: 'components_cards_office_cards';
+  info: {
+    displayName: 'Office Card';
+    icon: 'briefcase';
+  };
+  attributes: {
+    addressLine1: Schema.Attribute.String;
+    addressLine2: Schema.Attribute.String;
+    branchName: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    callText: Schema.Attribute.String;
+    contactNumber: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locationName: Schema.Attribute.String;
+    note: Schema.Attribute.String;
+    workingHours: Schema.Attribute.JSON;
+  };
+}
+
 export interface CardsPageBanner extends Struct.ComponentSchema {
   collectionName: 'components_cards_page_banners';
   info: {
@@ -23,6 +43,8 @@ export interface CardsPageBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    discoverButton: Schema.Attribute.String;
+    discoverButtonLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
   };
@@ -47,6 +69,7 @@ export interface CardsPropertyCard extends Struct.ComponentSchema {
     displayName: 'PropertyCard';
   };
   attributes: {
+    carouselLink: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
   };
@@ -95,9 +118,33 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   };
   attributes: {
     bannerText: Schema.Attribute.String;
+    bannerTextLineTwo: Schema.Attribute.String;
     fullScreenBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface MenuItemsMenuItems extends Struct.ComponentSchema {
+  collectionName: 'components_menu_items_menu_items';
+  info: {
+    displayName: 'menu-items';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    subMenuItem: Schema.Attribute.Component<'menu-items.sub-menu-items', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MenuItemsSubMenuItems extends Struct.ComponentSchema {
+  collectionName: 'components_menu_items_sub_menu_items';
+  info: {
+    displayName: 'sub-menu-Items';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -165,6 +212,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cards.media-card': CardsMediaCard;
+      'cards.office-card': CardsOfficeCard;
       'cards.page-banner': CardsPageBanner;
       'cards.plain-text-card': CardsPlainTextCard;
       'cards.property-card': CardsPropertyCard;
@@ -172,6 +220,8 @@ declare module '@strapi/strapi' {
       'faq.q-and-a': FaqQAndA;
       'form.career-form': FormCareerForm;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'menu-items.menu-items': MenuItemsMenuItems;
+      'menu-items.sub-menu-items': MenuItemsSubMenuItems;
       'signatue-table-section.signature-table-section': SignatueTableSectionSignatureTableSection;
       'signature-table-row.signature-table': SignatureTableRowSignatureTable;
       'tabel-section.signature-table-section': TabelSectionSignatureTableSection;

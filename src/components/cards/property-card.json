@@ -17,6 +17,9 @@
         "videos",
         "audios"
       ]
+    },
+    "carouselLink": {
+      "type": "string"
     }
   },
   "config": {}
