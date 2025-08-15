@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_rich_faq_rich_faqs",
+  "info": {
+    "displayName": "RichFAQ"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Answer": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

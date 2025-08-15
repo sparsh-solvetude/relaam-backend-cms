@@ -67,6 +67,11 @@
       "type": "component",
       "component": "cards.property-card",
       "repeatable": true
+    },
+    "RichFAQChat": {
+      "type": "component",
+      "component": "rich-faq.rich-faq",
+      "repeatable": true
     }
   }
 }

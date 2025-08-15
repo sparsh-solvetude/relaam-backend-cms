@@ -250,6 +250,18 @@
     "facilityManagementHeadingLineTwo": {
       "type": "string",
       "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "facilitySubTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "richDescription": {
+      "type": "blocks",
+      "pluginOptions": {
         "i18n": {
           "localized": true
         }
