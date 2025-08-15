@@ -39,7 +39,7 @@
         }
       }
     },
-    "facilityDescription": {
+    "facilityManagementHeading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -47,7 +47,7 @@
         }
       }
     },
-    "facilityDescription2": {
+    "facilityManagementDescription": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -247,12 +247,16 @@
         "audios"
       ]
     },
-    "facillitySubTitle": {
+    "facilityManagementHeadingLineTwo": {
       "type": "string",
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
+        "i18n": { "localized": true }
+      }
+    },
+    "facilitySubTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
       }
     },
     "richDescription": {

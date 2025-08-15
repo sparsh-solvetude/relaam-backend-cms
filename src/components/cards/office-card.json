@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_cards_office_cards",
+  "info": {
+    "displayName": "Office Card",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "branchName": {
+      "type": "string"
+    },
+    "locationName": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "workingHours": {
+      "type": "json"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "callText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "addressText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

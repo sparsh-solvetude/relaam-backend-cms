@@ -228,6 +228,14 @@
           "localized": true
         }
       }
+    },
+    "headingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
