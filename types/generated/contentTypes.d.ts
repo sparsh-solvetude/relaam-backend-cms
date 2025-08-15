@@ -1315,6 +1315,12 @@ export interface ApiLegacyPageLegacyPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    rebrandHeadingLineTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     rebrandStory: Schema.Attribute.Component<'cards.media-card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
