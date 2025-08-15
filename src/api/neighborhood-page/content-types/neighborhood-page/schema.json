@@ -204,6 +204,14 @@
       },
       "component": "cards.property-card",
       "repeatable": true
+    },
+    "headingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

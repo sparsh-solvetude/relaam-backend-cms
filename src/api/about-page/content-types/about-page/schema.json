@@ -172,6 +172,14 @@
       },
       "component": "full-screen-banner.banner",
       "repeatable": false
+    },
+    "aboutHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
