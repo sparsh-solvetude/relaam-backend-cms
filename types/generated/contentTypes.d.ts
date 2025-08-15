@@ -843,6 +843,12 @@ export interface ApiFacilityManagementPageFacilityManagementPage
           localized: true;
         };
       }>;
+    landlordButtonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     landlordDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -893,6 +899,12 @@ export interface ApiFacilityManagementPageFacilityManagementPage
           localized: true;
         };
       }>;
+    tenantsButtonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     tenantsDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -914,6 +926,12 @@ export interface ApiFacilityManagementPageFacilityManagementPage
         };
       }>;
     tocButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tocButtonLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
