@@ -217,6 +217,14 @@
           "localized": true
         }
       }
+    },
+    "signatureButtonLink": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

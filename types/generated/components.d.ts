@@ -7,6 +7,8 @@ export interface CardsMediaCard extends Struct.ComponentSchema {
     icon: 'filter';
   };
   attributes: {
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
     descriptionText: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     label: Schema.Attribute.String;
