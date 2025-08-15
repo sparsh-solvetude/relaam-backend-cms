@@ -21,6 +21,12 @@
         "videos",
         "audios"
       ]
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
     }
   },
   "config": {}

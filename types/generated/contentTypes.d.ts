@@ -1128,6 +1128,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    signatureButtonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SignatureHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1344,6 +1350,7 @@ export interface ApiNeighborhoodPageSlugNeighborhoodPageSlug
     POCrousel: Schema.Attribute.Component<'cards.property-card', true>;
     PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     PSButton: Schema.Attribute.String;
+    PSButtonLink: Schema.Attribute.String;
     PSDescription: Schema.Attribute.Text;
     PSHeading: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
@@ -1616,6 +1623,12 @@ export interface ApiNeighorhoodMbzPageNeighorhoodMbzPage
         };
       }>;
     PSButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    PSButtonLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2068,6 +2081,12 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    featuredButtonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     featuredHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2148,6 +2167,12 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
         };
       }>;
     SignatureButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    signatureButtonLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2398,6 +2423,7 @@ export interface ApiSignatureProjectSlugSignatureProjectSlug
       Schema.Attribute.Private;
     PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     PSButton: Schema.Attribute.String;
+    PSButtonLink: Schema.Attribute.String;
     PSDescription: Schema.Attribute.Text;
     psHeading: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;

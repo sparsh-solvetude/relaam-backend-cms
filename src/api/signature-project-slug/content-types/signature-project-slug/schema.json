@@ -78,6 +78,9 @@
       "type": "component",
       "component": "tabel-section.signature-table-section",
       "repeatable": true
+    },
+    "PSButtonLink": {
+      "type": "string"
     }
   }
 }

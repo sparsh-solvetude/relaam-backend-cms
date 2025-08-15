@@ -76,6 +76,9 @@
     },
     "slugDescription": {
       "type": "text"
+    },
+    "PSButtonLink": {
+      "type": "string"
     }
   }
 }
