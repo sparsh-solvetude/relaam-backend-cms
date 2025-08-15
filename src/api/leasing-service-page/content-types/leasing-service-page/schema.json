@@ -58,11 +58,6 @@
     "offeringTitle": {
       "type": "string"
     },
-    "FAQChat": {
-      "type": "component",
-      "component": "faq.q-and-a",
-      "repeatable": true
-    },
     "LSCrousel": {
       "type": "component",
       "component": "cards.property-card",

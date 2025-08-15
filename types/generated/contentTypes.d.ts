@@ -849,7 +849,7 @@ export interface ApiFacilityManagementPageFacilityManagementPage
           localized: true;
         };
       }>;
-    facillitySubTitle: Schema.Attribute.String &
+    facilitySubTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1296,7 +1296,6 @@ export interface ApiLeasingServicePageLeasingServicePage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FAQChat: Schema.Attribute.Component<'faq.q-and-a', true>;
     heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
