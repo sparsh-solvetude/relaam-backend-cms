@@ -76,6 +76,14 @@
       },
       "component": "cards.media-card",
       "repeatable": true
+    },
+    "rebrandHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
