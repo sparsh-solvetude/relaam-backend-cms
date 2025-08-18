@@ -47,14 +47,6 @@
         }
       }
     },
-    "facilityManagementDescription": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "landlordTitle": {
       "type": "string",
       "pluginOptions": {
@@ -250,13 +242,9 @@
     "facilityManagementHeadingLineTwo": {
       "type": "string",
       "pluginOptions": {
-        "i18n": { "localized": true }
-      }
-    },
-    "facilitySubTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": { "localized": true }
+        "i18n": {
+          "localized": true
+        }
       }
     },
     "richDescription": {

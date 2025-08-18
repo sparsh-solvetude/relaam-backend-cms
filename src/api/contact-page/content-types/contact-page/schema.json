@@ -34,11 +34,6 @@
     "faqTitleText": {
       "type": "string"
     },
-    "faq": {
-      "type": "component",
-      "component": "faq.q-and-a",
-      "repeatable": true
-    },
     "metaTitle": {
       "type": "string"
     },
@@ -69,6 +64,11 @@
     },
     "enquiriesButtonPhone": {
       "type": "string"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "rich-faq.rich-faq",
+      "repeatable": true
     }
   }
 }
