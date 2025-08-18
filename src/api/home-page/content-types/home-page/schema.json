@@ -192,16 +192,6 @@
         }
       }
     },
-    "FAQChat": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "faq.q-and-a",
-      "repeatable": true
-    },
     "ServiceHeadingLineTwo": {
       "type": "string",
       "pluginOptions": {
