@@ -1093,6 +1093,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    faqs: Schema.Attribute.Component<'rich-faq.rich-faq', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     FAQSubheading: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
