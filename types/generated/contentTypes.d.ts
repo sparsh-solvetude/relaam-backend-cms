@@ -1438,6 +1438,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
           localized: true;
         };
       }>;
+    ADButtonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     ADHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1457,6 +1463,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
         };
       }>;
     ALButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ALButtonLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1498,6 +1510,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
         };
       }>;
     LaResidenceButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    LaResidenceButtonLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
