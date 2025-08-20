@@ -260,6 +260,22 @@
           "localized": true
         }
       }
+    },
+    "overViewSubHeading2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "headingLineThree": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
