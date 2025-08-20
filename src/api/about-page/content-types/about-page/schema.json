@@ -204,6 +204,22 @@
           "localized": true
         }
       }
+    },
+    "promiseHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "purposeHeadingLineTwo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

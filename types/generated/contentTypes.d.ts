@@ -465,6 +465,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    promiseHeadingLineTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     promiseTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -487,6 +493,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
         };
       }>;
     purposeHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    purposeHeadingLineTwo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1886,6 +1898,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
           localized: true;
         };
       }>;
+    headingLineThree: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     headingLineTwo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1975,6 +1993,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
         };
       }>;
     overViewSubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    overViewSubHeading2: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
