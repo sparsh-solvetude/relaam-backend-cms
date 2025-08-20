@@ -144,6 +144,16 @@
       },
       "component": "tabel-section.signature-table-section",
       "repeatable": true
+    },
+    "metaData": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }

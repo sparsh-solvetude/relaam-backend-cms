@@ -50,6 +50,16 @@
       },
       "component": "cards.plain-text-card",
       "repeatable": true
+    },
+    "metaData": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }

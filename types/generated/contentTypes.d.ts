@@ -107,6 +107,43 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface AdminAuditLog extends Struct.CollectionTypeSchema {
+  collectionName: 'strapi_audit_logs';
+  info: {
+    displayName: 'Audit Log';
+    pluralName: 'audit-logs';
+    singularName: 'audit-log';
+  };
+  options: {
+    draftAndPublish: false;
+    timestamps: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    action: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
+      Schema.Attribute.Private;
+    payload: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -433,6 +470,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::about-page.about-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -660,6 +703,12 @@ export interface ApiCareerPageCareerPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::career-page.career-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     metaDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -769,6 +818,12 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::contact-page.contact-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -914,6 +969,12 @@ export interface ApiContractorsServicesPageContractorsServicesPage
       'oneToMany',
       'api::contractors-services-page.contractors-services-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringSubTitle: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1056,6 +1117,12 @@ export interface ApiFacilityManagementPageFacilityManagementPage
       'oneToMany',
       'api::facility-management-page.facility-management-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     registerTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -1270,7 +1337,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    FeaturedCarousel: Schema.Attribute.Component<'cards.property-card', true> &
+    FeaturedCarousel: Schema.Attribute.Component<'cards.property-card', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1299,6 +1366,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::home-page.home-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     ServiceCarousel: Schema.Attribute.Component<'cards.property-card', true> &
       Schema.Attribute.SetPluginOptions<{
@@ -1473,6 +1546,12 @@ export interface ApiLandlordsServicesPageLandlordsServicesPage
           localized: true;
         };
       }>;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1579,6 +1658,12 @@ export interface ApiLeasingServicePageLeasingServicePage
           localized: true;
         };
       }>;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1634,6 +1719,12 @@ export interface ApiLegacyPageLegacyPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::legacy-page.legacy-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     rebrandDescription: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
@@ -1738,6 +1829,12 @@ export interface ApiNeighborhoodPageSlugNeighborhoodPageSlug
       'oneToMany',
       'api::neighborhood-page-slug.neighborhood-page-slug'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     POCrousel: Schema.Attribute.Component<'cards.property-card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1947,6 +2044,12 @@ export interface ApiNeighborhoodPageNeighborhoodPage
       'oneToMany',
       'api::neighborhood-page.neighborhood-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     NBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2104,6 +2207,12 @@ export interface ApiNeighorhoodMbzPageNeighorhoodMbzPage
           localized: true;
         };
       }>;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     POCrousel: Schema.Attribute.Component<'cards.property-card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2184,6 +2293,12 @@ export interface ApiPropertyManagementPagePropertyManagementPage
       'oneToMany',
       'api::property-management-page.property-management-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringSubTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2302,6 +2417,12 @@ export interface ApiRecognitionPageRecognitionPage
       'oneToMany',
       'api::recognition-page.recognition-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     recognitionCards: Schema.Attribute.Component<
       'cards.plain-text-card',
@@ -2426,6 +2547,12 @@ export interface ApiServicesLeasingServicesPageServicesLeasingServicesPage
       'oneToMany',
       'api::services-leasing-services-page.services-leasing-services-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     servicesHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -2520,6 +2647,12 @@ export interface ApiServicesOwnersAssociationServicesOwnersAssociation
       'oneToMany',
       'api::services-owners-association.services-owners-association'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     ownerAssociationBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -2648,6 +2781,12 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::services-page.services-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     serviceBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
@@ -2849,6 +2988,12 @@ export interface ApiSignatureProjectAdOnePageSignatureProjectAdOnePage
       'oneToMany',
       'api::signature-project-ad-one-page.signature-project-ad-one-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2970,6 +3115,12 @@ export interface ApiSignatureProjectSlugSignatureProjectSlug
       'oneToMany',
       'api::signature-project-slug.signature-project-slug'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     PSBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3057,6 +3208,12 @@ export interface ApiSignatureProjectSignatureProject
       'oneToMany',
       'api::signature-project.signature-project'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3176,6 +3333,12 @@ export interface ApiTenantsServicesPageTenantsServicesPage
       'oneToMany',
       'api::tenants-services-page.tenants-services-page'
     >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offeringTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3759,6 +3922,7 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
+      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::transfer-token': AdminTransferToken;

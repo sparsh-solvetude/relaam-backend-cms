@@ -163,6 +163,18 @@ export interface RichFaqRichFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    displayName: 'SEO';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+  };
+}
+
 export interface SignatueTableSectionSignatureTableSection
   extends Struct.ComponentSchema {
   collectionName: 'components_signatue_table_section_signature_table_sections';
@@ -238,6 +250,7 @@ declare module '@strapi/strapi' {
       'menu-items.menu-items': MenuItemsMenuItems;
       'menu-items.sub-menu-items': MenuItemsSubMenuItems;
       'rich-faq.rich-faq': RichFaqRichFaq;
+      'seo.seo': SeoSeo;
       'signatue-table-section.signature-table-section': SignatueTableSectionSignatureTableSection;
       'signature-table-row.signature-table': SignatureTableRowSignatureTable;
       'tabel-section.signature-table-section': TabelSectionSignatureTableSection;
