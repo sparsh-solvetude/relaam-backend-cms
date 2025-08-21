@@ -1,0 +1,74 @@
+{
+  "kind": "singleType",
+  "collectionName": "tenant_portals",
+  "info": {
+    "singularName": "tenant-portal",
+    "pluralName": "tenant-portals",
+    "displayName": "Tenant Portal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "TPBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FTIcon": {
+      "type": "component",
+      "component": "features-icon.feature-icon",
+      "repeatable": true
+    },
+    "tpDescription": {
+      "type": "text"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featuredHeading": {
+      "type": "string"
+    },
+    "featuredSubHeading": {
+      "type": "blocks"
+    },
+    "featuredButton": {
+      "type": "string"
+    },
+    "sectionHeading": {
+      "type": "string"
+    },
+    "submitRequestCard": {
+      "type": "component",
+      "component": "guide-section.guides",
+      "repeatable": true
+    },
+    "metaData": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    }
+  }
+}
