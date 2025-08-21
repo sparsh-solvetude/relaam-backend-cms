@@ -9,7 +9,7 @@
       "type": "string"
     },
     "subHeading": {
-      "type": "string"
+      "type": "text"
     },
     "Banner": {
       "type": "media",

@@ -107,43 +107,6 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface AdminAuditLog extends Struct.CollectionTypeSchema {
-  collectionName: 'strapi_audit_logs';
-  info: {
-    displayName: 'Audit Log';
-    pluralName: 'audit-logs';
-    singularName: 'audit-log';
-  };
-  options: {
-    draftAndPublish: false;
-    timestamps: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
-      Schema.Attribute.Private;
-    payload: Schema.Attribute.JSON;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
-  };
-}
-
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -1442,6 +1405,109 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         };
       }>;
     SignatureTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIosAndroidAppIosAndroidApp extends Struct.SingleTypeSchema {
+  collectionName: 'ios_android_apps';
+  info: {
+    displayName: 'Ios Android App';
+    pluralName: 'ios-android-apps';
+    singularName: 'ios-android-app';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    banner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    bannerDescription: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    bannerHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    iconCard: Schema.Attribute.Component<'features-icon.feature-icon', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    iosGuide: Schema.Attribute.Component<'guide-section.guides', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ios-android-app.ios-android-app'
+    >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    subDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -3215,6 +3281,48 @@ export interface ApiSignatureProjectSignatureProject
   };
 }
 
+export interface ApiTenantPortalTenantPortal extends Struct.SingleTypeSchema {
+  collectionName: 'tenant_portals';
+  info: {
+    displayName: 'Tenant Portal';
+    pluralName: 'tenant-portals';
+    singularName: 'tenant-portal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    featuredButton: Schema.Attribute.String;
+    featuredHeading: Schema.Attribute.String;
+    featuredImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    featuredSubHeading: Schema.Attribute.Blocks;
+    FTIcon: Schema.Attribute.Component<'features-icon.feature-icon', true>;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tenant-portal.tenant-portal'
+    > &
+      Schema.Attribute.Private;
+    metaData: Schema.Attribute.Component<'seo.seo', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    sectionHeading: Schema.Attribute.String;
+    subHeading: Schema.Attribute.String;
+    submitRequestCard: Schema.Attribute.Component<'guide-section.guides', true>;
+    TPBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tpDescription: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTenantsServicesPageTenantsServicesPage
   extends Struct.SingleTypeSchema {
   collectionName: 'tenants_services_pages';
@@ -3841,7 +3949,6 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
-      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::transfer-token': AdminTransferToken;
@@ -3854,6 +3961,7 @@ declare module '@strapi/strapi' {
       'api::facility-management-page.facility-management-page': ApiFacilityManagementPageFacilityManagementPage;
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::ios-android-app.ios-android-app': ApiIosAndroidAppIosAndroidApp;
       'api::landlords-services-page.landlords-services-page': ApiLandlordsServicesPageLandlordsServicesPage;
       'api::leasing-service-page.leasing-service-page': ApiLeasingServicePageLeasingServicePage;
       'api::legacy-page.legacy-page': ApiLegacyPageLegacyPage;
@@ -3869,6 +3977,7 @@ declare module '@strapi/strapi' {
       'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project-slug.signature-project-slug': ApiSignatureProjectSlugSignatureProjectSlug;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
+      'api::tenant-portal.tenant-portal': ApiTenantPortalTenantPortal;
       'api::tenants-services-page.tenants-services-page': ApiTenantsServicesPageTenantsServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
