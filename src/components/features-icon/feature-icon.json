@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_features_icon_feature_icons",
+  "info": {
+    "displayName": "feature Icon"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
