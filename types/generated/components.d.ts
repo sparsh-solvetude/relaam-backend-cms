@@ -51,6 +51,7 @@ export interface CardsPageBanner extends Struct.ComponentSchema {
     discoverButtonLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
+    subHeadingLineTwo: Schema.Attribute.String;
   };
 }
 
@@ -101,6 +102,17 @@ export interface FaqQAndA extends Struct.ComponentSchema {
   };
 }
 
+export interface FeaturesIconFeatureIcon extends Struct.ComponentSchema {
+  collectionName: 'components_features_icon_feature_icons';
+  info: {
+    displayName: 'feature Icon';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FormCareerForm extends Struct.ComponentSchema {
   collectionName: 'components_form_career_forms';
   info: {
@@ -126,6 +138,18 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
     fullScreenBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface GuideSectionGuides extends Struct.ComponentSchema {
+  collectionName: 'components_guide_section_guides';
+  info: {
+    displayName: 'Guides';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -245,8 +269,10 @@ declare module '@strapi/strapi' {
       'cards.property-card': CardsPropertyCard;
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
+      'features-icon.feature-icon': FeaturesIconFeatureIcon;
       'form.career-form': FormCareerForm;
       'full-screen-banner.banner': FullScreenBannerBanner;
+      'guide-section.guides': GuideSectionGuides;
       'menu-items.menu-items': MenuItemsMenuItems;
       'menu-items.sub-menu-items': MenuItemsSubMenuItems;
       'rich-faq.rich-faq': RichFaqRichFaq;

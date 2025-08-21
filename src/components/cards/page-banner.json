@@ -26,6 +26,9 @@
     },
     "discoverButtonLink": {
       "type": "string"
+    },
+    "subHeadingLineTwo": {
+      "type": "string"
     }
   },
   "config": {}
