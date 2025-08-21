@@ -1781,6 +1781,14 @@ export interface ApiNeighborhoodPageSlugNeighborhoodPageSlug
           localized: true;
         };
       }>;
+    featuredImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1793,12 +1801,6 @@ export interface ApiNeighborhoodPageSlugNeighborhoodPageSlug
       'api::neighborhood-page-slug.neighborhood-page-slug'
     >;
     metaData: Schema.Attribute.Component<'seo.seo', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    POCrousel: Schema.Attribute.Component<'cards.property-card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

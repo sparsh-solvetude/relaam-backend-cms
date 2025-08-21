@@ -59,16 +59,6 @@
         }
       }
     },
-    "POCrousel": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "cards.property-card",
-      "repeatable": true
-    },
     "description1": {
       "type": "text",
       "pluginOptions": {
@@ -173,6 +163,21 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "featuredImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
