@@ -150,7 +150,7 @@
         }
       },
       "component": "cards.property-card",
-      "repeatable": false
+      "repeatable": true
     },
     "FeaturedTitle": {
       "type": "string",
