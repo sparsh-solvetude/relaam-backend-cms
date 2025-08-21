@@ -50,8 +50,7 @@ export interface CardsPageBanner extends Struct.ComponentSchema {
     discoverButton: Schema.Attribute.String;
     discoverButtonLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
-    subHeading: Schema.Attribute.String;
-    subHeadingLineTwo: Schema.Attribute.String;
+    subHeading: Schema.Attribute.Text;
   };
 }
 
