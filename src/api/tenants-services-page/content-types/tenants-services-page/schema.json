@@ -93,22 +93,6 @@
         }
       }
     },
-    "tsDescription2": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "tsDescription3": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "offeringTitle": {
       "type": "string",
       "pluginOptions": {
