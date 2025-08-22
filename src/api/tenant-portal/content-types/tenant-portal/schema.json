@@ -69,6 +69,22 @@
       "type": "component",
       "component": "seo.seo",
       "repeatable": false
+    },
+    "aboutSubheading": {
+      "type": "string"
+    },
+    "aboutHeading": {
+      "type": "string"
+    },
+    "aboutBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
