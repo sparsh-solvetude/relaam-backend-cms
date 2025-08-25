@@ -48,6 +48,24 @@
       },
       "component": "menu-items.menu-items",
       "repeatable": true
+    },
+    "socialMediaLinks": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.social-media",
+      "repeatable": true
+    },
+    "getSocialText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
