@@ -48,6 +48,9 @@
     },
     "addressText": {
       "type": "string"
+    },
+    "openingHoursText": {
+      "type": "string"
     }
   },
   "config": {}

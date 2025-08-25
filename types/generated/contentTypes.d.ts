@@ -701,6 +701,18 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    callBackText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    communicationsCheckboxText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     contactForm: Schema.Attribute.Component<'form.career-form', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -717,6 +729,12 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
         };
       }>;
     descriptionParagraphTwo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    emailRequestText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -787,6 +805,12 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    modeOfContactHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     newOffices: Schema.Attribute.Component<'cards.office-card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -812,6 +836,24 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
         };
       }>;
     ourOfficesTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    privacyPolicyCheckboxText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    privacyPolicyLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    privacyPolicyText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1200,6 +1242,12 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    getSocialText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1209,6 +1257,12 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
     publishedAt: Schema.Attribute.DateTime;
+    socialMediaLinks: Schema.Attribute.Component<'common.social-media', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     subHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1238,6 +1292,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     aboutBanner: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutBannerLink: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

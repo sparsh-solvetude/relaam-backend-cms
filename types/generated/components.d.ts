@@ -33,6 +33,7 @@ export interface CardsOfficeCard extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locationName: Schema.Attribute.String;
     note: Schema.Attribute.String;
+    openingHoursText: Schema.Attribute.String;
     workingHours: Schema.Attribute.JSON;
   };
 }
@@ -76,6 +77,18 @@ export interface CardsPropertyCard extends Struct.ComponentSchema {
     carouselLink: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface CommonSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_common_social_medias';
+  info: {
+    displayName: 'socialMedia';
+    icon: 'link';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -266,6 +279,7 @@ declare module '@strapi/strapi' {
       'cards.page-banner': CardsPageBanner;
       'cards.plain-text-card': CardsPlainTextCard;
       'cards.property-card': CardsPropertyCard;
+      'common.social-media': CommonSocialMedia;
       'common.text-block': CommonTextBlock;
       'faq.q-and-a': FaqQAndA;
       'features-icon.feature-icon': FeaturesIconFeatureIcon;

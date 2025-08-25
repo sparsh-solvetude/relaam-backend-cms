@@ -235,6 +235,14 @@
       },
       "component": "seo.seo",
       "repeatable": true
+    },
+    "aboutBannerLink": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
