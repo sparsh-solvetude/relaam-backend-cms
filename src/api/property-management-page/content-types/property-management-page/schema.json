@@ -15,22 +15,6 @@
     }
   },
   "attributes": {
-    "heading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "subHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "PMBanner": {
       "type": "media",
       "pluginOptions": {
@@ -136,14 +120,6 @@
       },
       "component": "cards.property-card",
       "repeatable": true
-    },
-    "offeringSubTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "metaData": {
       "type": "component",

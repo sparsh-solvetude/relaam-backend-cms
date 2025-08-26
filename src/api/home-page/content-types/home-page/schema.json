@@ -79,14 +79,6 @@
         }
       }
     },
-    "ServiceHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "ServiceDescription": {
       "type": "text",
       "pluginOptions": {
@@ -160,14 +152,6 @@
         }
       }
     },
-    "FeaturedHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "FAQTitle": {
       "type": "string",
       "pluginOptions": {
@@ -186,22 +170,6 @@
     },
     "FAQSubheading": {
       "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "ServiceHeadingLineTwo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "FeaturedHeadingLineTwo": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true

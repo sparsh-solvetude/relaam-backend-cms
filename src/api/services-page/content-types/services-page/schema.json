@@ -15,22 +15,6 @@
     }
   },
   "attributes": {
-    "heading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "subHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "serviceBanner": {
       "type": "media",
       "pluginOptions": {
@@ -45,14 +29,6 @@
         "videos",
         "audios"
       ]
-    },
-    "focusHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "focusSubHeading": {
       "type": "string",
@@ -173,14 +149,6 @@
         "videos",
         "audios"
       ]
-    },
-    "focusHeadingLineTwo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "featuredButtonLink": {
       "type": "string",

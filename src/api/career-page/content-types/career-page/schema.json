@@ -25,14 +25,6 @@
       "component": "full-screen-banner.banner",
       "repeatable": false
     },
-    "careerTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "careerDescription": {
       "type": "text",
       "pluginOptions": {
