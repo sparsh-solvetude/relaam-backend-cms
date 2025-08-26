@@ -2420,6 +2420,18 @@ export interface ApiPropertyManagementPagePropertyManagementPage
           localized: true;
         };
       }>;
+    pmHeadingMobile: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pmHeadingWeb: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pmSubHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
