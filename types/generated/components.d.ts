@@ -51,6 +51,8 @@ export interface CardsPageBanner extends Struct.ComponentSchema {
     discoverButton: Schema.Attribute.String;
     discoverButtonLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
+    headingMobile: Schema.Attribute.String;
+    headingWeb: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
   };
 }
@@ -147,6 +149,8 @@ export interface FullScreenBannerBanner extends Struct.ComponentSchema {
   attributes: {
     bannerText: Schema.Attribute.String;
     bannerTextLineTwo: Schema.Attribute.String;
+    bannerTextMobile: Schema.Attribute.String;
+    bannerTextWeb: Schema.Attribute.String;
     fullScreenBanner: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;

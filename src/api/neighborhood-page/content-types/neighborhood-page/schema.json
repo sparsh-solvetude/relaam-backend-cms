@@ -155,6 +155,22 @@
       },
       "component": "cards.media-card",
       "repeatable": true
+    },
+    "headingWeb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "headingMobile": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

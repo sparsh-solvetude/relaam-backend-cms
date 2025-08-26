@@ -26,6 +26,12 @@
     },
     "discoverButtonLink": {
       "type": "string"
+    },
+    "headingWeb": {
+      "type": "string"
+    },
+    "headingMobile": {
+      "type": "string"
     }
   },
   "config": {}

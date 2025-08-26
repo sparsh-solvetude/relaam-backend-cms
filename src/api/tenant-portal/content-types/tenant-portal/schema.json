@@ -169,6 +169,12 @@
         "videos",
         "audios"
       ]
+    },
+    "headingWeb": {
+      "type": "string"
+    },
+    "headingMobile": {
+      "type": "string"
     }
   }
 }

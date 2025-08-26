@@ -175,6 +175,22 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "adOneHeadingWeb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "adOneHeadingMobile": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
