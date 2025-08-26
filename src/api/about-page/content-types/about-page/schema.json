@@ -214,6 +214,22 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "valuesHeadingWeb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "valuesHeadingMobile": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

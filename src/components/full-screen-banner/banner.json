@@ -20,6 +20,12 @@
     },
     "bannerTextLineTwo": {
       "type": "string"
+    },
+    "bannerTextWeb": {
+      "type": "string"
+    },
+    "bannerTextMobile": {
+      "type": "string"
     }
   },
   "config": {}
