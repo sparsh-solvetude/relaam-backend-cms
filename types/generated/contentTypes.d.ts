@@ -2414,12 +2414,6 @@ export interface ApiPropertyManagementPagePropertyManagementPage
           localized: true;
         };
       }>;
-    pmHeading: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     pmHeadingMobile: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2427,12 +2421,6 @@ export interface ApiPropertyManagementPagePropertyManagementPage
         };
       }>;
     pmHeadingWeb: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    pmSubHeading: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
