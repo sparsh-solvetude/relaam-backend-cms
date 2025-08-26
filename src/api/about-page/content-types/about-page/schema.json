@@ -215,7 +215,7 @@
       "component": "seo.seo",
       "repeatable": false
     },
-    "valuesHeadingWeb": {
+    "aboutHeadingWeb": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -223,7 +223,7 @@
         }
       }
     },
-    "valuesHeadingMobile": {
+    "aboutHeadingMobile": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
