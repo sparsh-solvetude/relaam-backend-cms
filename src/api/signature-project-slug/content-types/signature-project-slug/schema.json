@@ -59,22 +59,6 @@
         }
       }
     },
-    "adOneHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "adOneSubHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "adOneCrousel": {
       "type": "component",
       "pluginOptions": {

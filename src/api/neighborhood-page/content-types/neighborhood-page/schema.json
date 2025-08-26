@@ -15,14 +15,6 @@
     }
   },
   "attributes": {
-    "heading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "NBanner": {
       "type": "media",
       "pluginOptions": {
@@ -112,23 +104,7 @@
         }
       }
     },
-    "headingLineTwo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "overViewSubHeading2": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "headingLineThree": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

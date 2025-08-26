@@ -39,14 +39,6 @@
         }
       }
     },
-    "aboutHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "aboutDescription": {
       "type": "text",
       "pluginOptions": {
@@ -172,14 +164,6 @@
       },
       "component": "full-screen-banner.banner",
       "repeatable": false
-    },
-    "aboutHeadingLineTwo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "valuesText": {
       "type": "string",

@@ -15,22 +15,6 @@
     }
   },
   "attributes": {
-    "heading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "subHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "ownerAssociationBanner": {
       "type": "media",
       "pluginOptions": {
