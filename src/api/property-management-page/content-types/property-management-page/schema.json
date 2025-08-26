@@ -38,22 +38,6 @@
         }
       }
     },
-    "pmHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "pmSubHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "pmBanner2": {
       "type": "media",
       "pluginOptions": {
