@@ -1,0 +1,77 @@
+{
+  "kind": "singleType",
+  "collectionName": "community_management_pages",
+  "info": {
+    "singularName": "community-management-page",
+    "pluralName": "community-management-pages",
+    "displayName": "Community Management Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CMBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "lsTitle": {
+      "type": "string"
+    },
+    "lsHeading": {
+      "type": "string"
+    },
+    "lsSubHeading": {
+      "type": "string"
+    },
+    "lsBanner2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "lsDescription1": {
+      "type": "text"
+    },
+    "lsDescription2": {
+      "type": "text"
+    },
+    "lsDescription3": {
+      "type": "text"
+    },
+    "offeringTitle": {
+      "type": "string"
+    },
+    "CMCrousel": {
+      "type": "component",
+      "component": "cards.property-card",
+      "repeatable": true
+    },
+    "RichFAQChat": {
+      "type": "component",
+      "component": "rich-faq.rich-faq",
+      "repeatable": true
+    },
+    "metaData": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "headingWeb": {
+      "type": "string"
+    },
+    "headingMobile": {
+      "type": "string"
+    }
+  }
+}

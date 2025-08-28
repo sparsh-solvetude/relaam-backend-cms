@@ -107,6 +107,43 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface AdminAuditLog extends Struct.CollectionTypeSchema {
+  collectionName: 'strapi_audit_logs';
+  info: {
+    displayName: 'Audit Log';
+    pluralName: 'audit-logs';
+    singularName: 'audit-log';
+  };
+  options: {
+    draftAndPublish: false;
+    timestamps: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    action: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::audit-log'> &
+      Schema.Attribute.Private;
+    payload: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -673,6 +710,48 @@ export interface ApiCareerPageCareerPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCommunityManagementPageCommunityManagementPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'community_management_pages';
+  info: {
+    displayName: 'Community Management Page';
+    pluralName: 'community-management-pages';
+    singularName: 'community-management-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CMBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    CMCrousel: Schema.Attribute.Component<'cards.property-card', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    headingMobile: Schema.Attribute.String;
+    headingWeb: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::community-management-page.community-management-page'
+    > &
+      Schema.Attribute.Private;
+    lsBanner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    lsDescription1: Schema.Attribute.Text;
+    lsDescription2: Schema.Attribute.Text;
+    lsDescription3: Schema.Attribute.Text;
+    lsHeading: Schema.Attribute.String;
+    lsSubHeading: Schema.Attribute.String;
+    lsTitle: Schema.Attribute.String;
+    metaData: Schema.Attribute.Component<'seo.seo', false>;
+    offeringTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    RichFAQChat: Schema.Attribute.Component<'rich-faq.rich-faq', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3343,6 +3422,99 @@ export interface ApiSignatureProjectSignatureProject
   };
 }
 
+export interface ApiSmartHubSmartHub extends Struct.SingleTypeSchema {
+  collectionName: 'smart_hubs';
+  info: {
+    displayName: 'SmartHub';
+    pluralName: 'smart-hubs';
+    singularName: 'smart-hub';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::smart-hub.smart-hub'
+    >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    propertyBanner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    propertyDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    propertyHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    registerHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    StepToRegister: Schema.Attribute.Component<'guide-section.guides', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTenantPortalTenantPortal extends Struct.SingleTypeSchema {
   collectionName: 'tenant_portals';
   info: {
@@ -4093,6 +4265,7 @@ declare module '@strapi/strapi' {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
+      'admin::audit-log': AdminAuditLog;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
       'admin::transfer-token': AdminTransferToken;
@@ -4100,6 +4273,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::career-page.career-page': ApiCareerPageCareerPage;
+      'api::community-management-page.community-management-page': ApiCommunityManagementPageCommunityManagementPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::contractors-services-page.contractors-services-page': ApiContractorsServicesPageContractorsServicesPage;
       'api::facility-management-page.facility-management-page': ApiFacilityManagementPageFacilityManagementPage;
@@ -4121,6 +4295,7 @@ declare module '@strapi/strapi' {
       'api::signature-project-ad-one-page.signature-project-ad-one-page': ApiSignatureProjectAdOnePageSignatureProjectAdOnePage;
       'api::signature-project-slug.signature-project-slug': ApiSignatureProjectSlugSignatureProjectSlug;
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
+      'api::smart-hub.smart-hub': ApiSmartHubSmartHub;
       'api::tenant-portal.tenant-portal': ApiTenantPortalTenantPortal;
       'api::tenants-services-page.tenants-services-page': ApiTenantsServicesPageTenantsServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
