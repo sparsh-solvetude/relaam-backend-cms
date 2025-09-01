@@ -66,6 +66,8 @@ export interface CardsPlainTextCard extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    linkTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }

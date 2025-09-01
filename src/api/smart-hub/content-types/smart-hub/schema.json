@@ -72,30 +72,17 @@
       "component": "guide-section.guides",
       "repeatable": true
     },
-    "propertyHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "propertyBanner": {
-      "type": "media",
+    "SHCard": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "component": "cards.plain-text-card",
+      "repeatable": true
     },
-    "propertyDescription": {
+    "shDescription": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
