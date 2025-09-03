@@ -3453,7 +3453,25 @@ export interface ApiSmartHubSmartHub extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    description1: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    link: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    linkTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -3464,6 +3482,12 @@ export interface ApiSmartHubSmartHub extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::smart-hub.smart-hub'
     >;
+    MapCard: Schema.Attribute.Component<'cards.plain-text-card', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     metaData: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
