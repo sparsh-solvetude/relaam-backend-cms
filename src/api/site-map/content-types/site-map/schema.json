@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_maps",
+  "info": {
+    "singularName": "site-map",
+    "pluralName": "site-maps",
+    "displayName": "SiteMap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "header": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "descriptionText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "pages": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "table.site-map",
+      "repeatable": true
+    }
+  }
+}

@@ -265,6 +265,31 @@ export interface TableSignatureTable extends Struct.ComponentSchema {
   };
 }
 
+export interface TableSiteMap extends Struct.ComponentSchema {
+  collectionName: 'components_table_site_maps';
+  info: {
+    displayName: 'siteMap';
+    icon: 'bulletList';
+  };
+  attributes: {
+    childPages: Schema.Attribute.Component<'table.site-map-children', true>;
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface TableSiteMapChildren extends Struct.ComponentSchema {
+  collectionName: 'components_table_site_map_children';
+  info: {
+    displayName: 'siteMapChildren';
+    icon: 'link';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface TableTableRow extends Struct.ComponentSchema {
   collectionName: 'components_table_table_rows';
   info: {
@@ -300,6 +325,8 @@ declare module '@strapi/strapi' {
       'signature-table-row.signature-table': SignatureTableRowSignatureTable;
       'tabel-section.signature-table-section': TabelSectionSignatureTableSection;
       'table.signature-table': TableSignatureTable;
+      'table.site-map': TableSiteMap;
+      'table.site-map-children': TableSiteMapChildren;
       'table.table-row': TableTableRow;
     }
   }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_table_site_maps",
+  "info": {
+    "displayName": "siteMap",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "childPages": {
+      "type": "component",
+      "component": "table.site-map-children",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

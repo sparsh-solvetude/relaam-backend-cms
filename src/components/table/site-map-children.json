@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_table_site_map_children",
+  "info": {
+    "displayName": "siteMapChildren",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
