@@ -9,19 +9,10 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "CMBanner": {
       "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -31,36 +22,16 @@
       ]
     },
     "lsTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
     "lsHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
     "lsSubHeading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
     "lsBanner2": {
       "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "multiple": false,
       "allowedTypes": [
         "images",
@@ -70,82 +41,37 @@
       ]
     },
     "lsDescription1": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "text"
     },
     "lsDescription2": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "text"
     },
     "lsDescription3": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "text"
     },
     "offeringTitle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
     "CMCrousel": {
       "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "component": "cards.property-card",
       "repeatable": true
     },
     "RichFAQChat": {
       "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "component": "rich-faq.rich-faq",
       "repeatable": true
     },
     "metaData": {
       "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "component": "seo.seo",
       "repeatable": false
     },
     "headingWeb": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     },
     "headingMobile": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "type": "string"
     }
   }
 }

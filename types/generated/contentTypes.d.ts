@@ -727,107 +727,31 @@ export interface ApiCommunityManagementPageCommunityManagementPage
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
-    CMBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    CMCrousel: Schema.Attribute.Component<'cards.property-card', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    CMBanner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    CMCrousel: Schema.Attribute.Component<'cards.property-card', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    headingMobile: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    headingWeb: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    locale: Schema.Attribute.String;
+    headingMobile: Schema.Attribute.String;
+    headingWeb: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::community-management-page.community-management-page'
-    >;
-    lsBanner2: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
     > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsDescription1: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsDescription2: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsDescription3: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsHeading: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsSubHeading: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lsTitle: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    metaData: Schema.Attribute.Component<'seo.seo', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    offeringTitle: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+      Schema.Attribute.Private;
+    lsBanner2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    lsDescription1: Schema.Attribute.Text;
+    lsDescription2: Schema.Attribute.Text;
+    lsDescription3: Schema.Attribute.Text;
+    lsHeading: Schema.Attribute.String;
+    lsSubHeading: Schema.Attribute.String;
+    lsTitle: Schema.Attribute.String;
+    metaData: Schema.Attribute.Component<'seo.seo', false>;
+    offeringTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    RichFAQChat: Schema.Attribute.Component<'rich-faq.rich-faq', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    RichFAQChat: Schema.Attribute.Component<'rich-faq.rich-faq', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
