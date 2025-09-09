@@ -1673,6 +1673,12 @@ export interface ApiIosAndroidAppIosAndroidApp extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    aboutTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3687,6 +3693,12 @@ export interface ApiTenantPortalTenantPortal extends Struct.SingleTypeSchema {
         };
       }>;
     aboutSubheading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -175,6 +175,14 @@
     },
     "headingMobile": {
       "type": "string"
+    },
+    "aboutTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
