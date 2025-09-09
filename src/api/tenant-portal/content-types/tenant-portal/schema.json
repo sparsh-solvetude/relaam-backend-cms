@@ -183,6 +183,14 @@
           "localized": true
         }
       }
+    },
+    "aboutHeading2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
