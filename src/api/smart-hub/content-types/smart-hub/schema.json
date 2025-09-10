@@ -188,6 +188,22 @@
         "videos",
         "audios"
       ]
+    },
+    "aboutHeading2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "shDescriptionVisit": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
