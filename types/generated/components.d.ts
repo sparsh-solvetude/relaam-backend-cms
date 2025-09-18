@@ -107,6 +107,17 @@ export interface CommonTextBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface DropDownSelectDropdown extends Struct.ComponentSchema {
+  collectionName: 'components_drop_down_select_dropdowns';
+  info: {
+    displayName: 'SelectDropdown';
+  };
+  attributes: {
+    lable: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface FaqQAndA extends Struct.ComponentSchema {
   collectionName: 'components_faq_q_and_as';
   info: {
@@ -312,6 +323,7 @@ declare module '@strapi/strapi' {
       'cards.property-card': CardsPropertyCard;
       'common.social-media': CommonSocialMedia;
       'common.text-block': CommonTextBlock;
+      'drop-down.select-dropdown': DropDownSelectDropdown;
       'faq.q-and-a': FaqQAndA;
       'features-icon.feature-icon': FeaturesIconFeatureIcon;
       'form.career-form': FormCareerForm;

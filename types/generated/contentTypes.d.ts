@@ -3931,6 +3931,176 @@ export interface ApiSmartHubSmartHub extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiTajdidFormTajdidForm extends Struct.SingleTypeSchema {
+  collectionName: 'tajdid_forms';
+  info: {
+    displayName: 'Tajdid Form';
+    pluralName: 'tajdid-forms';
+    singularName: 'tajdid-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    buttonText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dropdown: Schema.Attribute.Component<'drop-down.select-dropdown', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    dropdownPlaceholder: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tajdid-form.tajdid-form'
+    >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    tajdidForm: Schema.Attribute.Component<'form.career-form', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    textarea: Schema.Attribute.Component<'form.career-form', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTajdidPageTajdidPage extends Struct.SingleTypeSchema {
+  collectionName: 'tajdid_pages';
+  info: {
+    displayName: 'Tajdid Page';
+    pluralName: 'tajdid-pages';
+    singularName: 'tajdid-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    buttonText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descriptionOne: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    descriptionThree: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    descriptionTwo: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    email: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    emaiLink: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    enquiriesButtonPhone: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tajdid-page.tajdid-page'
+    >;
+    metaData: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTenantPortalTenantPortal extends Struct.SingleTypeSchema {
   collectionName: 'tenant_portals';
   info: {
@@ -4727,6 +4897,8 @@ declare module '@strapi/strapi' {
       'api::signature-project.signature-project': ApiSignatureProjectSignatureProject;
       'api::site-map.site-map': ApiSiteMapSiteMap;
       'api::smart-hub.smart-hub': ApiSmartHubSmartHub;
+      'api::tajdid-form.tajdid-form': ApiTajdidFormTajdidForm;
+      'api::tajdid-page.tajdid-page': ApiTajdidPageTajdidPage;
       'api::tenant-portal.tenant-portal': ApiTenantPortalTenantPortal;
       'api::tenants-services-page.tenants-services-page': ApiTenantsServicesPageTenantsServicesPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,91 @@
+{
+  "kind": "singleType",
+  "collectionName": "tajdid_forms",
+  "info": {
+    "singularName": "tajdid-form",
+    "pluralName": "tajdid-forms",
+    "displayName": "Tajdid Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "heroText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tajdidForm": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "form.career-form",
+      "repeatable": true
+    },
+    "buttonText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "buttonLink": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "metaData": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "dropdown": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "drop-down.select-dropdown",
+      "repeatable": true
+    },
+    "dropdownPlaceholder": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "textarea": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "form.career-form",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_drop_down_select_dropdowns",
+  "info": {
+    "displayName": "SelectDropdown"
+  },
+  "options": {},
+  "attributes": {
+    "lable": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
