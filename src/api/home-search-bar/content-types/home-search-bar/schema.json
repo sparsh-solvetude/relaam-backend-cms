@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_search_bars",
+  "info": {
+    "singularName": "home-search-bar",
+    "pluralName": "home-search-bars",
+    "displayName": "Home SearchBar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "locationDropDown": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "drop-down.select-dropdown",
+      "repeatable": true
+    },
+    "propertyType": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "drop-down.select-dropdown",
+      "repeatable": true
+    },
+    "bedrooms": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "drop-down.select-dropdown",
+      "repeatable": true
+    },
+    "buttonText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "buttonLink": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
