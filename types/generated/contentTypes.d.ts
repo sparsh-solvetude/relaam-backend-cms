@@ -1591,6 +1591,12 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    footerQuotesText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     getSocialText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
