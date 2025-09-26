@@ -29,8 +29,9 @@ module.exports = {
 
       // 📧 Define email content
       const mailOptions = {
-        from: `"Tajdid Form" <${process.env.SMTP_USERNAME}>`, // must be authenticated sender
+        from: `"Tajdid Form" <${email}>`, // must be authenticated sender
         to: process.env.FORM_RECEIVER, // 👈 send mail to the email entered in the form
+        replyTo: email,
         subject: "Tajdid Form Submission",
         html: `
           <h2>New submission!</h2>

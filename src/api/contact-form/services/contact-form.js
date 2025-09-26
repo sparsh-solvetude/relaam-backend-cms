@@ -18,7 +18,8 @@ module.exports = {
     // Email content
     const mailOptions = {
       from: `"${formData.firstName} ${formData.lastName}" <${formData.email}>`,
-      to: process.env.CONTACT_FORM_RECEIVER, // <-- new contact form receiver
+      to: process.env.CONTACT_FORM_RECEIVER,
+      replyTo: formData.email,
       subject: `New Contact Form Submission`,
       html: `
         <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
